@@ -11,8 +11,6 @@ split train and valida data
 python train_val_split.py 
 ```
 
-
-
 # 学習はGoogle colabでやってモデルを作成。
 そのモデルをインストールして、ローカルで予測をする。
 
