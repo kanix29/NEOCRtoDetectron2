@@ -1,7 +1,5 @@
 # NEOCR Dataset (Natural Environment OCR Dataset) to Detectron2
 
-
-
 # Usage
 ```sh
 wget http://www.iapr-tc11.org/dataset/NEOCR/neocr_dataset.tar.gz
