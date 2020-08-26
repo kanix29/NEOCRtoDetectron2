@@ -3,6 +3,7 @@ neocr_dataset.tar.gz
 neocr_dataset/
 images/
 annotations/
+annotated_images/
 output/
 output.zip
 output_prediction
