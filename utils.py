@@ -34,6 +34,7 @@ def get_neocr_dicts(img_dir, xml_dir):
         record["width"] = width
         
         objs = []
+        x, y = 0, 0
         for object_iter in xmltree.findall('object'):
 
             polygon_iter = object_iter.find("polygon")
