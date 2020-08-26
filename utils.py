@@ -1,8 +1,12 @@
+import os
+import glob
+from tqdm import tqdm
+import cv2
+import numpy as np
+
 from xml.etree import ElementTree
 from xml.etree.ElementTree import Element, SubElement
 from lxml import etree
-import glob
-from tqdm import tqdm
 
 from detectron2.structures import BoxMode
 
@@ -10,9 +14,11 @@ from detectron2.structures import BoxMode
 def get_neocr_dicts(img_dir, xml_dir):
     ENCODE_METHOD = 'utf-8'
     num_files = len(os.listdir(xml_dir))
+    xml_files = glob.glob(f'{xml_dir}/*.xml')
+    xml_files.sort()
 
     dataset_dicts = []
-    for idx, xml_file in tqdm(enumerate(glob.iglob(f'{xml_dir}/*.xml')), total=num_files):
+    for idx, xml_file in tqdm(enumerate(xml_files), total=num_files):
         record = {}
         
         # process XML
