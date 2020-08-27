@@ -1,7 +1,8 @@
 # NEOCR Dataset (Natural Environment OCR Dataset) to Detectron2
 
-## Introduction
-
+## Explanation
+The Annotation of NEOCR Dataset is provided in XML based on the schema of LabelMe.\
+[Link](http://www.iapr-tc11.org/mediawiki/index.php?title=NEOCR:_Natural_Environment_OCR_Dataset)
 
 ## Folder structure
 The following shows basic folder structure.
@@ -12,6 +13,9 @@ The following shows basic folder structure.
 │   └── Images/...
 │
 ├── train_val_split.py 
+├── extract_dataset.py 
+├── annotate_images.py 
+│
 ├── images 
 │   ├── train/*.jpg
 │   └── val/.jpg
@@ -42,19 +46,15 @@ tar -xvf neocr_dataset.tar.gz
 python train_val_split.py 
 ```
 
-### appropriaet annotations
-annotationsがうまくいっていないものがあるので取り除く。
+### Get dataset annotated correctl
+```python
+python extract_images.py
+```
 
-### 学習はGoogle colabでやってモデルを作成。
-そのモデルをインストールして、ローカルで予測をする。
+### Confirm images annotated
+```python
+python annotate_images.py
+```
 
-[Link](http://www.iapr-tc11.org/mediawiki/index.php?title=NEOCR:_Natural_Environment_OCR_Dataset)
-
-## Zip file
-`Annotations/users/pixtract/dataset/*.xml`\
-`Images/users/pixtract/dataset/*.jpg`\
-The annotation is provided in XML based on the schema of LabelMe.
-
-## xml2coco
-[GitHub](https://github.com/aaronlelevier/mlearning/blob/master/mlearning/coco.py)
-
+### Train on Google Colab and Make model.pth
+Install model.pth and predict on local.
