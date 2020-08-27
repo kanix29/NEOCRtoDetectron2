@@ -7,6 +7,8 @@ annotated_images/
 output/
 output.zip
 output_prediction
+extracted_images/
+extracted_annotations/
 
 # over size
 model/

@@ -42,6 +42,9 @@ tar -xvf neocr_dataset.tar.gz
 python train_val_split.py 
 ```
 
+### appropriaet annotations
+annotationsがうまくいっていないものがあるので取り除く。
+
 ### 学習はGoogle colabでやってモデルを作成。
 そのモデルをインストールして、ローカルで予測をする。
 
