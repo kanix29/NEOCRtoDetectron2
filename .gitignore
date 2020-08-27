@@ -10,6 +10,9 @@ output_prediction
 extracted_images/
 extracted_annotations/
 make_annotated_images.py
+train_val_split.py
+extract_dataset.ipynb
+confirm_annotation.ipynb
 
 # over size
 model/
