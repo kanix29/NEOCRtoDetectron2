@@ -6,7 +6,6 @@ annotations/
 annotated_images/
 output/
 output.zip
-output_prediction
 extracted_images/
 extracted_annotations/
 make_annotated_images.py
