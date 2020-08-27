@@ -3,16 +3,30 @@ import shutil
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--percentage_val', default=20, help='percentage of val data')
+parser.add_argument('-p', '--percentage_val', type=int, default=20, help='percentage of val data')
+parser.add_argument('--input_images_dir',  default='neocr_dataset/Images/users/pixtract/dataset/')
+parser.add_argument('--input_annotations_dir', default='neocr_dataset/Annotations/users/pixtract/dataset/')
+parser.add_argument('--save_train_img_dir', default='images/train/')
+parser.add_argument('--save_train_xml_dir', default='annotations/train/')
+parser.add_argument('--save_val_img_dir', default='images/val/')
+parser.add_argument('--save_val_xml_dir', default='annotations/val/')
+parser.add_argument('--extract', action='store_true')
 args = parser.parse_args() 
 
-img_input_path = 'neocr_dataset/Images/users/pixtract/dataset/'
-ann_input_path = 'neocr_dataset/Annotations/users/pixtract/dataset/'
+img_input_path = args.input_images_dir
+ann_input_path = args.input_annotations_dir
 
-img_val_output_path = 'images/val/'
-xml_val_output_path = 'annotations/val/'
-img_train_output_path = 'images/train/'
-xml_train_output_path = 'annotations/train/'
+if args.extract:
+    img_val_output_path = 'extracted_' + args.save_val_img_dir
+    xml_val_output_path = 'extracted_' + args.save_val_xml_dir
+    img_train_output_path = 'extracted_' + args.save_train_img_dir
+    xml_train_output_path = 'extracted_' + args.save_train_xml_dir
+
+else:
+    img_val_output_path = args.save_val_img_dir
+    xml_val_output_path = args.save_val_xml_dir
+    img_train_output_path = args.save_train_img_dir
+    xml_train_output_path = args.save_train_xml_dir
 
 os.makedirs(img_val_output_path, exist_ok=True)
 os.makedirs(xml_val_output_path, exist_ok=True)
