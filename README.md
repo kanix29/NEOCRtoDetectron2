@@ -43,17 +43,17 @@ tar -xvf neocr_dataset.tar.gz
 
 ### Split train and valid data
 Add datasets annotated incorrectly to val directory 
-```python
+```sh
 python train_val_split_neocr.py 
 ```
 
 ### Get dataset annotated correctly
-```python
+```sh
 python extract_images.py
 ```
 
 ### Confirm images annotated
-```python
+```sh
 python annotate_images.py
 ```
 
