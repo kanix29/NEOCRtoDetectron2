@@ -59,3 +59,7 @@ python annotate_images.py
 
 ### Train on Google Colab and Make model.pth
 Install model.pth and predict on local.
+
+## About Notebook
+`Detectron2_NEOCR.ipynb`: explanation of the usage of detectron2\
+`predict_NEOCR.ipynb`: Annotate by using model trained on Google Colab
