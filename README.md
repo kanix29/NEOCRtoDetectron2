@@ -22,7 +22,7 @@ The following shows basic folder structure.
 ├── images 
 │   ├── train/*.jpg
 │   └── val/.jpg
-├── annotaions
+└── annotaions
      ├── train/*.xml
      └── val/*.cml
 ```
