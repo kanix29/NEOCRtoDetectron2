@@ -13,8 +13,10 @@ The following shows basic folder structure.
 │   └── Images/...
 │
 ├── train_val_split.py 
+├── text_detection_NEOCR.py 
 ├── extract_dataset.py 
 ├── annotate_images.py 
+├── text_detection_NEOCR.ipynb
 │
 ├── images 
 │   ├── train/*.jpg
@@ -47,19 +49,23 @@ Add datasets annotated incorrectly to val directory
 python train_val_split_neocr.py 
 ```
 
-### Get dataset annotated correctly
+### Get annotated images of valid dataset
+```sh
+python text_detection_NEOCR.py -r [input_dir]
+```
+
+### Others
+Confirm images annotated correctly
+```sh
+python annotate_images.py
+```
+Get dataset annotated correctly
 ```sh
 python extract_images.py
 ```
 
-### Confirm images annotated
-```sh
-python annotate_images.py
-```
-
 ### Train on Google Colab and Make model.pth
-Install model.pth and predict on local.
+Install `model.pth` and predict on local.
 
 ## About Notebook
-`Detectron2_NEOCR.ipynb`: explanation of the usage of detectron2\
-`predict_NEOCR.ipynb`: Annotate by using model trained on Google Colab
+`Detectron2_NEOCR.ipynb`: explanation of the usage of detectron2
