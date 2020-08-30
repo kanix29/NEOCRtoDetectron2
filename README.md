@@ -9,25 +9,27 @@ is provided in XML based on the schema of LabelMe.\
 The following shows basic folder structure.
 ```
 ├── utils.py
-├── neocr_dataset
-│   ├── Annotations/...
-│   └── Images/...
 │
+├── Detectron2_NEOCR.ipynb
 ├── train_val_split.py 
 ├── text_detection_NEOCR.py 
 ├── extract_dataset.py 
 ├── annotate_images.py 
-├── text_detection_NEOCR.ipynb
 │
-├── images 
+├── neocr_dataset (download)
+│   ├── Annotations/...
+│   └── Images/...
+│
+├── images (train_val_split.py)
 │   ├── train/*.jpg
 │   └── val/.jpg
-└── annotaions
+└── annotaions (train_val_split.py)
      ├── train/*.xml
      └── val/*.cml
 ```
 
 ## Development Environment
+* xlmtodict == 0.12.0
 * lxlm == 4.5.0
 * tqdm == 4.48.2
 * torch == 1.6.0
@@ -65,4 +67,4 @@ python extract_images.py
 
 ## About Notebook
 `Detectron2_NEOCR.ipynb` is a explanation of the usage of detectron2.\
-You can refer this notebook to train NEOCR dataset. Then, install `model.pth` and detect on local environment.
+You can refer this notebook to train NEOCR dataset. Then, install `model_final.pth` and detect on local environment.
