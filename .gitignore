@@ -3,7 +3,7 @@ neocr_dataset.tar.gz
 neocr_dataset/
 images/
 annotations/
-annotated_images/
+images_annotations/
 output/
 output.zip
 extracted_images/

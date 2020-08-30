@@ -18,8 +18,8 @@ from detectron2.data import MetadataCatalog, DatasetCatalog
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-r', '--input_dir', type=str, required=True)
-    parser.add_argument('-o', '--output_dir', type=str, default='output/annotated_images')
-    parser.add_argument('-m', '--model_path', type=str, default='model/model_final.pth')
+    parser.add_argument('-o', '--output_dir', type=str, default='output/text_detection_images')
+    parser.add_argument('-m', '--model_path', type=str, default='model/neocr_model_final_v2.pth')
     return parser.parse_args()
 
 
