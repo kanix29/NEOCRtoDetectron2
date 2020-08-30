@@ -3,12 +3,12 @@
 ## Explanation
 The Annotation of [NEOCR Dataset]((http://www.iapr-tc11.org/mediawiki/index.php?title=NEOCR:_Natural_Environment_OCR_Dataset))
 is provided in XML based on the schema of LabelMe.\
-`utils.get_neocr_dicts` is the function of converting xml to Detectron's dataset. Therefore, copy and use this function.
+`get_detectron_dict.get_neocr_dicts` is the function of converting LabelMe format to Detectron2 format. Therefore, copy and use this function.
 
 ## Folder structure
 The following shows basic folder structure.
 ```
-├── utils.py
+├── get_detectron_dict.py
 │
 ├── Detectron2_NEOCR.ipynb
 ├── train_val_split.py 

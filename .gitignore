@@ -14,8 +14,8 @@ train_val_split.py
 extract_dataset.ipynb
 confirm_annotation.ipynb
 text_detection_NEOCR.ipynb
-utils.ipynb
-utils_v0.py
+get_detectron_dict.ipynb
+get_detectron_dict_v0.py
 
 sample.jpg
 
