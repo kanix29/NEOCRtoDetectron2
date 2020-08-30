@@ -35,7 +35,7 @@ def get_neocr_dicts(xml_dir):
             # Get bbox of this object
             rectangle = []
             for pts in ann_object['polygon']['pt']:
-                x, y = int(pts['x']), int(pts['y'])
+                x, y = float(pts['x']), float(pts['y']) # int could not be dumped to json file
                 coordinate = [x, y]
                 rectangle.append(coordinate)
             rectangle = np.array(rectangle)
