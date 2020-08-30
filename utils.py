@@ -15,11 +15,14 @@ def get_neocr_dicts(xml_dir):
         # Load XML format to Dict
         doc = xmltodict.parse(open(xml_file).read())
 
+        filename = os.path.join(img_dir, doc['annotation']['filename'])
+        height, width = cv2.imread(filename).shape[:2]
+
         record = {}
-        record["file_name"] = doc['annotation']['filename']
+        record["file_name"] = filename
         record["image_id"] = idx
-        record["height"] = doc['annotation']['properties']['height']
-        record["width"] = doc['annotation']['properties']['width']
+        record["height"] = height # different from doc['annotation']['properties']['height']
+        record["width"] = width # different from doc['annotation']['properties']['width']
 
         # for single object
         if not type(doc['annotation']['object']) == list:
