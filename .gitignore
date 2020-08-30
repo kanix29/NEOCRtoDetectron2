@@ -8,12 +8,16 @@ output/
 output.zip
 extracted_images/
 extracted_annotations/
+output_prediction/
 make_annotated_images.py
 train_val_split.py
 extract_dataset.ipynb
 confirm_annotation.ipynb
 text_detection_NEOCR.ipynb
 utils.ipynb
+utils_v0.py
+
+sample.jpg
 
 NEOCR_datasets.zip
 NEOCR_datasets/
