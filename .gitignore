@@ -13,6 +13,7 @@ train_val_split.py
 extract_dataset.ipynb
 confirm_annotation.ipynb
 text_detection_NEOCR.ipynb
+utils.ipynb
 
 NEOCR_datasets.zip
 NEOCR_datasets/
