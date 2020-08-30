@@ -8,7 +8,7 @@ output/
 output.zip
 extracted_images/
 extracted_annotations/
-output_prediction/
+output_evaluation/
 make_annotated_images.py
 train_val_split.py
 extract_dataset.ipynb
